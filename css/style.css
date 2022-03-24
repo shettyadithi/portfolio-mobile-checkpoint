@@ -1,0 +1,312 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;500;700&family=Space+Mono:wght@400;700&display=swap');
+
+body {
+    background-color: rgb(8, 8, 8);
+    color: white;
+    /* margin:1%;
+	  padding:1%; */
+    font-family: 'Sora', sans-serif;
+    font-weight: 200;
+}
+
+.skip {
+    color: white;
+    background-color: black;
+    font-size: 15px;
+}
+
+h1{
+	font-size: 30px; 
+	font-weight: 700;
+}
+
+
+h2{
+	font-size: 20px; 
+	font-weight: 700;
+}
+
+h3 {
+    font-size: 18px; 
+    font-weight: 500;
+}
+
+nav{
+    margin-bottom: 20px;
+}
+
+#logo {
+  padding: 10px;
+  border: none;
+  margin: 0;
+  animation: heartbeat .25s infinite alternate;
+}
+
+@keyframes heartbeat{
+	to { transform: scale(1.2); }
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+nav li{
+  list-style-type: none;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+nav li a:hover:not(.active) {
+    background-color: #111;
+}
+  
+.active {
+    background-color: rgb(79, 79, 194);
+    border: 2px solid #ffffff ;
+}
+
+.grid_gallery {
+  display: grid;
+  grid-template-columns: 1fr 7fr 7fr 1fr;
+  align-items: stretch;
+  box-sizing: border-box;
+  grid-auto-rows: 150px;
+  grid-gap: 5px 5px;
+}
+
+.grid_gallery img {
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+#img_1, #img_3, #img_6, #img_8 {
+  grid-column: 2/ span 1;
+}
+
+#img_2, #img_4, #img_7, #img_9 {
+  grid-column: 3/ span 1;
+}
+
+#img_5 {
+  grid-column: 2/ span 2;
+}
+
+
+.flex_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col_2 {
+  display: flex;
+  margin: 5px;
+}
+
+#moana_img_2, #moana_img_5, #moana_img_8 {
+  padding: 0 5px 0 0;
+}
+
+#moana_img_3, #moana_img_6, #moana_img_9 {
+  padding: 0;
+}
+
+.col img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.col_2 img {
+  width: 50%;
+  margin:0;
+}
+
+
+.col img, .col_2 img {
+  border:none;
+  border-radius: 5px;
+  width: 150px;
+  object-fit: cover;
+}
+
+
+
+
+img {
+    margin: 20px;
+    border: 5px solid rgb(79, 79, 194);
+    padding: 10px;
+}
+
+p, h1, h2, h3 {
+    padding: 20px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 150%;;
+}
+
+
+
+img:hover {
+ filter: sepia(70%);
+}
+
+.banner {
+    /* width: 95%;
+    animation-name: banneranimation;
+  animation-duration: 4s; */
+  
+ background-color: #cccccc;
+ height: 200px;
+ background-size: cover;
+}
+
+#home_banner {
+  animation: animatedBanner 4s linear infinite;
+}
+
+#snow_white_banner {
+  background-image: url("../images/snow_white.jpeg");
+  display: flex;
+}
+
+#overlay_text {
+  background-color: rgba(8, 8, 8, 0.5);
+  align-self: flex-end;
+  padding: 10px 20px 10px 20px;
+}
+
+@keyframes animatedBanner {
+  0% {
+    background-image: url("../images/Disney_Banner_2.png");
+  }
+  33% {
+    background-image: url("../images/moana_banner.jpeg");
+  }
+  /* 66%{
+    background-image: url("../images/Mulan.jpeg");
+  } */
+  100% {
+    background-image: url("../images/encanto_banner.jpeg");
+  }
+}
+
+
+#page_banner_moana {
+  background-image: url("../images/moana_banner.jpeg");
+}
+
+#page_banner_mulan {
+  background-image: url("../images/mulan_banner.jpeg");
+}
+
+#page_banner_encanto {
+  background-image: url("../images/encanto_banner.jpeg");
+}
+
+
+@keyframes banneranimation {
+    from {width: 50%; filter: brightness(50%);}
+    to {width: 95%; filter: brightness(100%);}
+    
+}
+
+li a {
+    color: rgb(159, 159, 253);
+    font-size: 15px;
+}
+
+/* Styling for Footer */
+
+footer {
+padding: 20px;
+background-color: rgb(79, 79, 194);
+color: white;
+text-align: center;
+}
+
+#social_container {
+  display: flex;
+  justify-content: center;
+}
+
+#social_container a {
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+}
+
+#social_container a i {
+  padding-right: 5px;
+}
+
+/* Styling for contact form */
+
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: 'Sora', sans-serif;
+}
+
+#contactHeading, label{
+  color: rgb(8, 8, 8);
+  padding-left: 0;
+}
+
+.contactContainer p {
+  color: rgb(8, 8, 8);
+  padding: 0;
+}
+
+#checkbox {
+  margin-bottom: 16px;
+}
+
+input[type=submit] {
+  background-color: rgb(79, 79, 194);
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(8, 8, 8);
+  color: #ffffff;
+}
+
+.contactContainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 10px;
+}
+
