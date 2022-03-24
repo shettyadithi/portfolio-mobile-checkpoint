@@ -37,7 +37,7 @@ nav{
 }
 
 #logo {
-  padding: 10px;
+  padding: 20px 0px 20px 20px;
   border: none;
   margin: 0;
   animation: heartbeat .25s infinite alternate;
@@ -45,6 +45,11 @@ nav{
 
 @keyframes heartbeat{
 	to { transform: scale(1.2); }
+}
+
+#main_heading {
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
